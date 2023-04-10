@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Question 1</title>
+</head>
+<body>
+	<script>
+		function e_name(arr){
+			var n=arr.length;
+			var count=0;
+			for(var j=0;j<n;j++){
+				var str=arr[j];
+				var ch1=str.slice(-2);
+				var ch2=str.slice(-1);
+				if(ch1=="ie" || ch2=="y"){
+					count++;
+				}
+			}
+			return count;
+		}
+		var arr=["ankit","adasdie","dfdfy","dffy","ewrerie","kumar"];
+		var ans=e_name(arr);
+		alert(`Required Output is ${ans}`);	
+	
+	</script>
+</body>
+</html>

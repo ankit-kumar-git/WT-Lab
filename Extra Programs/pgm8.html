@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Question</title>
+</head>
+<body>
+	<script>
+		function row_averages(arr){
+			var n=arr.length;
+			var m=arr[0].length;
+			var ans=[];
+			var sum=0;
+			for(var i=0;i<n;i++){
+				for(var j=0;j<m;j++){
+					sum=sum+arr[i][j];
+				}
+				ans.push(sum/m);
+				sum=0;
+			}
+			return ans;
+		}
+		console.log("hello");	
+		var arr=[[1,2,3,4,5],[2,3,4,5,7],[3,4,5,6,7]];
+		var res=row_averages(arr);
+		console.log(res);
+		for(var i=0;i<arr.length;i++){
+			document.write(`Average of row ${i+1} is:${res[i]}`);
+			document.write("<br/>");
+		}
+	</script>
+</body>
+</html>

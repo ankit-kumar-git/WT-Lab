@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Question 1</title>
+</head>
+<body>
+	<script>
+		var str=prompt("Enter a sentence: ");
+		var n=str.length;
+		var newarr=[];
+		var f=0,l=0;
+		for(var j=0;j<n;j++){
+			if(str[j]==' '){
+				l=j;
+				newarr.push(str.slice(f,l));
+				f=j+1;
+				
+			}
+		}
+		newarr.push(str.slice(f,n));
+		var sortedarr=newarr.sort();
+		document.write(sortedarr);
+				
+		
+	</script>
+</body>
+</html>

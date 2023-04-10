@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Question</title>
+</head>
+<body>
+	<script>
+		function counter(arr){
+			var n=arr.length;
+			var cntpos=0,cntneg=0,cntzero=0;
+			for(var i=0;i<n;i++){
+				var x=arr[i];
+				switch(x){
+					case 0:cntzero++;
+						break;
+					default:if(x<0){
+							cntneg++;
+						}
+						else{
+							cntpos++;	
+						}
+						break;
+				}
+			}
+			var ans=[cntpos,cntneg,cntzero];
+			return ans;
+					
+		}
+		var arr=[2,5,-12,0,0,34,0,-12,-45,-3];
+		var ans=counter(arr);
+		alert(`Number of positive numbers are: ${ans[0]}, Number of negative numbers are: ${ans[1]} and Number of zeroes are: ${ans[2]}.`);	
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Question 1</title>
+</head>
+<body>
+	<script>
+		function no_zeros(arr){
+			var check=0;
+			var n=arr.length;
+			var newarr=[];
+			for(var i=0;i<n;i++){
+				if(arr[i]==0){
+					check=1;
+				}
+				else{
+					newarr.push(arr[i]);
+				}
+			}
+			document.write(newarr);
+			if(check==1) return true;
+			else return false;
+		}
+		
+		var arr=[5,89,345,0,45,0,23,0,0];
+		var ans=no_zeros(arr);
+		if(ans==true){
+			alert("Given array contains zeroes");
+		}
+		else{
+			alert("Given array does contain zeroes");
+		}		
+	
+	</script>
+</body>
+</html>

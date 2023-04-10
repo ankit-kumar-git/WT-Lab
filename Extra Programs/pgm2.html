@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Question 1</title>
+</head>
+<body>
+	<script>
+		var str=prompt("Enter a name: ");
+		var n=str.length;
+		var newarr=[];
+		var f=0,l=0;
+		for(var j=0;j<n;j++){
+			if(str[j]==' '){
+				l=j;
+				newarr.push(str.slice(f,l));
+				f=j+1;
+				
+			}
+		}
+		newarr.push(str.slice(f,n));
+		var x=newarr.length;
+		var check=0;
+		for(var j=0;j<x;j++){
+			if(newarr[j].length>15){
+				alert("Invalid name");
+				check=1;
+				break;
+			}
+		}
+		if(check==0) alert("Valid name");		
+		
+	</script>
+</body>
+</html>
